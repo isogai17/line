@@ -1,0 +1,17 @@
+# Render Dashboard > New > Blueprint でこのリポジトリを選択します。
+# シークレットの値はRenderの設定画面で入力し、このファイルには記載しません。
+services:
+  - type: web
+    name: kotoba-draft
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    autoDeploy: false
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
