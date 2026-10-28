@@ -5,3 +5,7 @@ node_modules/
 coverage/
 *.log
 .DS_Store
+data/
+test-output/
+*.sqlite*
+*.db

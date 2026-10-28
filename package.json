@@ -1,14 +1,15 @@
 {
-  "name": "line-reply-assistant",
-  "version": "0.1.0",
+  "name": "my-money-book",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "文章を貼り付けてAIの返信案を作る、個人向けWebアプリ",
+  "description": "スマホとPCで使う個人専用の家計簿",
   "engines": { "node": ">=24" },
   "scripts": {
     "start": "node --env-file-if-exists=.env src/server.js",
     "dev": "node --watch --env-file-if-exists=.env src/server.js",
-    "demo": "node --env-file-if-exists=.env src/server.js --demo",
-    "test": "node --test"
-  }
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": { "exceljs": "4.4.0", "pg": "8.23.1", "pdfjs-dist": "6.4.299" },
+  "overrides": { "exceljs": { "uuid": "11.1.1" } }
 }
